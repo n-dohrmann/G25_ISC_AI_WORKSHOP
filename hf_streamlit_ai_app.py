@@ -6,12 +6,12 @@ from langchain.prompts import ChatPromptTemplate
 # --- Page Configuration ---
 st.set_page_config(
     page_title="AI Chat Assistant",
-    page_icon="🤖",
+    page_icon="#",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-st.title("🤖 Streamlit AI Chat Assistant")
+st.title("# Streamlit AI Chat Assistant")
 st.markdown("""
 Welcome! Ask any question to the AI assistant. This application uses OpenAI's `gpt-4o-mini` model.
 Enter your OpenAI API Key in the sidebar to begin.
