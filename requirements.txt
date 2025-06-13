@@ -6,4 +6,3 @@ langchain_community
 chromadb
 protobuf==3.19.0
 standard-imghdr
-pysqlite3==3.43.0
