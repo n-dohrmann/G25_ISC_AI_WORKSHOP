@@ -8,6 +8,8 @@ from langchain_openai.chat_models import ChatOpenAI
 from langchain_openai.embeddings import OpenAIEmbeddings
 from langchain.schema.runnable import RunnablePassthrough
 from langchain.schema.output_parser import StrOutputParser
+from langchain_community.vectorstores import Chroma
+from langchain_community.document_loaders import DataFrameLoader
 
 
 DATA_URL = "https://huggingface.co/datasets/ISIntersystems/HealthcareData/resolve/main/HealthcareData.csv"
