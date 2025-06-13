@@ -3,4 +3,4 @@ openai
 langchain
 langchain_openai
 langchain_community
-chroma_db
+chromadb
