@@ -6,3 +6,4 @@ langchain_community
 chromadb
 protobuf==3.19.0
 standard-imghdr
+sqlite3==3.35.0
