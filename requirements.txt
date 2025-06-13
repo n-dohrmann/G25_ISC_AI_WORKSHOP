@@ -5,3 +5,4 @@ langchain_openai
 langchain_community
 chromadb
 protobuf==3.19.0
+imghdr
