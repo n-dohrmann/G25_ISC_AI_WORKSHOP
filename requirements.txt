@@ -1,8 +1,9 @@
-streamlit
+streamlit==1.37.0
 openai
 langchain
 langchain_openai
 langchain_community
 chromadb
-protobuf==3.19.0
+protobuf==3.20.1
 standard-imghdr
+pysqlite3-binary
