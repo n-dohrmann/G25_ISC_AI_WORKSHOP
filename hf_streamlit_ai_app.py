@@ -1,3 +1,7 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 # Block 2: Create the Streamlit Application File (app.py)
 import streamlit as st
 from langchain_openai import ChatOpenAI
@@ -312,7 +316,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # --- Chat Input and AI Response Logic ---
-if user_query := st.chat_input("What would you like to ask?"):
+if user_query := st.chat_input("Enter the clinical notes for the patient visit"):
     # Add user message to session state and display it
     st.session_state.messages.append({"role": "user", "content": user_query})
     with st.chat_message("user"):
@@ -325,6 +329,7 @@ if user_query := st.chat_input("What would you like to ask?"):
             try:
 
                 response = generate_rag_response(user_query, VECTOR_DB)
+                st.markdown(response)
                 st.session_state.messages.append({"role": "assistant", "content": response})
                 
                 #chain = prompt_template | llm
@@ -333,7 +338,7 @@ if user_query := st.chat_input("What would you like to ask?"):
                 
                 #message_placeholder.markdown(ai_response_content)
                 # Add AI response to session state
-                #st.session_state.messages.append({"role": "assistant", "content": ai_response_content})
+                # st.session_state.messages.append({"role": "assistant", "content": ai_response_content})
 
             except Exception as e:
                 error_message = f"Sorry, I encountered an error: {str(e)}"
