@@ -356,6 +356,6 @@ with st.sidebar:
     st.markdown("---")
     st.subheader("About")
     st.info(
-        "This is a Streamlit application demonstrating an AI chat interface "
-        "using LangChain and OpenAI's gpt-4o-mini model."
+        "The **Note Category Finder** takes in a clinical note,"
+        "and uses a RAG AI system to determine an appropriate category."
     )
